@@ -21,6 +21,12 @@
         </developer>
     </developers>
     <contributors>
+    	<contributor>
+            <!-- DB4O GRAPH -->
+            <name>German Viscuso</name>
+            <email>german@db4o.com</email>
+            <url>http://developer.db4o.com</url>
+        </contributor>
         <contributor>
             <!-- ORIENTDB GRAPH -->
             <name>Luca Garulli</name>
@@ -42,6 +48,12 @@
     </contributors>
     <inceptionYear>2010</inceptionYear>
     <dependencies>
+        <!-- DB4O SUPPORT -->
+        <dependency>
+          <groupId>com.db4o</groupId>
+          <artifactId>db4o-full-java5</artifactId>
+          <version>8.0-SNAPSHOT</version>
+        </dependency>
         <!-- GRAPHDB SUPPORT -->
         <dependency>
             <groupId>com.tinkerpop</groupId>
@@ -76,6 +88,11 @@
         </dependency>
     </dependencies>
     <repositories>
+        <!-- DB4O REPO -->
+        <repository>
+          <id>source.db4o</id>
+          <url>http://source.db4o.com/maven</url>
+        </repository>
         <repository>
             <id>tinkerpop-repository</id>
             <name>TinkerPop Maven2 Repository</name>
@@ -192,6 +209,15 @@
                         <property>
                             <name>rexsterGraphURI</name>
                             <value>http://localhost:8182/emptygraph</value>
+                        </property>
+                        <!-- DB4O TEST PROPERTIES -->
+                        <property>
+                            <name>testDb4oGraph</name>
+                            <value>true</value>
+                        </property>
+                        <property>
+                            <name>db4oGraphDirectory</name>
+                            <value>/tmp/blueprints_test</value>
                         </property>
                     </systemProperties>
                 </configuration>
